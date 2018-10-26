@@ -27,7 +27,7 @@ How to run:
 
     code that runs:
 
-      ms = sMsNormCalc(deBrog, scatAmpFolder, NpadBins)
+      sms = sMsNormCalc(deBrog, scatAmpFolder, NpadBins)
 
       nbzParams = {
         "molName"   : "nitrobenzene",
@@ -40,19 +40,18 @@ How to run:
 
         Variables:
         
-          deBrog: DeBroglie wavelength of the electron in Angstroms
-          scatAmpFolder: Folder path to the scattering amplitudes
-          NpadBins: Number of bins to pad the FFT to increase granularity in the pair correlation
-          Nbins: Number of bins in the diffraction line out
-          maxS: How far in Q the diffraction pattern will go.
+          deBrog:         DeBroglie wavelength of the electron in Angstroms
+          scatAmpFolder:  Folder path to the scattering amplitudes
+          NpadBins:       Number of bins to pad the FFT to increase granularity in the pair correlation
+          Nbins:          Number of bins in the diffraction line out
+          maxS:           How far in Q the diffraction pattern will go.
 
-          molName: molecule name
-          atoms: list of all atom species in the molecule, scatttering amplitudes 
-                        for these atoms must exist in ./scatteringAmplitudes
-          Natoms: the multiplicity of each atom in 'atoms'.
-          filterSTD: The standard deviation of the smoothing gaussian is defined as
-                        Nbins/filterSTD
-
+          molName:        Molecule name
+          atoms:          List of all atom species in the molecule, scatttering amplitudes 
+                              for these atoms must exist in ./scatteringAmplitudes
+          Natoms:         The multiplicity of each atom in 'atoms'.
+          filterSTD:      The standard deviation of the smoothing gaussian is defined as
+                              Nbins/filterSTD
 
 
 pairCorr.cpp
@@ -62,3 +61,9 @@ pairCorr.cpp
         tranformation of the modified molecular diffraction line out saved in 
         results. The coefficients from the transforms are saved in results as 
         well and then plotted by sMsNorm.py.
+
+
+baseTools
+
+  Directory that contains various classes and namespaces used to save, plot,
+        and analyze data. 
